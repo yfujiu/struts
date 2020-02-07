@@ -18,7 +18,13 @@
 package org.superbiz.struts;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AddUserForm extends ActionSupport {
+    private final UserService userService;
 
+    public AddUserForm(UserService userService) {
+        this.userService = userService;
+    }
 }
